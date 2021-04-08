@@ -1,0 +1,40 @@
+.search-container {
+  height: 200px;
+  background-image: url('https://i.redd.it/4f0zuww1s0f31.jpg');
+  background-size: cover;
+
+  .menuButton {
+    color: white;
+  }
+
+  h1 {
+    margin-left: 40px;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .search-bar {
+    width: 250px;
+  }
+}
+
+h3 {
+  margin-left: 17px;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+ion-row {
+  ion-col{
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    border-radius: 10px;
+  }
+  p {
+    font-size: 15px;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}

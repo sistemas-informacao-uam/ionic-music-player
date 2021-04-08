@@ -1,31 +1,10 @@
-<ion-content>
-  <div class="search-container">
-    <ion-icon name="menu-outline"></ion-icon>
-      <ion-toolbar color="left">
-        <h1>Buscar:</h1>
-        <ion-searchbar class="search-bar" placeholder=""></ion-searchbar>
-      </ion-toolbar>
-  </div>
-
-  <h3>Músicas que talvez você goste:</h3>
-  <ion-row>
-    <ion-col class="image-card ion-activatable ripple-parent">
-      <img src="https://images.pexels.com/photos/2048865/pexels-photo-2048865.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-      <p>Idealism</p>
-      <span>Falling Asleep at 3:37 AM</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-    <ion-col class="image-card ion-activatable ripple-parent">
-      <img src="https://images.pexels.com/photos/1119972/pexels-photo-1119972.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
-      <p>Flamingosis</p>
-      <span>Football Head</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-    <ion-col class="image-card ion-activatable ripple-parent">
-      <img src="https://images.pexels.com/photos/1071188/pexels-photo-1071188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
-      <p>The Deli</p>
-      <span>Flowers</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-  </ion-row>
-</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="explorar">
+      <ion-icon name="musical-notes-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="biblioteca">
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
