@@ -6,13 +6,14 @@
 
     <ion-toolbar color="left">
       <h1>Buscar:</h1>
-      <ion-searchbar class="search-bar" placeholder=""></ion-searchbar>
+      <ion-searchbar class="search-bar" placeholder="" (ionInput)="filterData($event)" (ionClear)="resetFilter()">
+      </ion-searchbar>
     </ion-toolbar>
   </div>
 
   <h3>Músicas que talvez você goste:</h3>
 
-  <ion-card class="ion-activatable ripple-parent" routerLink="/home/player" *ngFor="let song of data">
+  <ion-card class="ion-activatable ripple-parent" routerLink="/home/player" *ngFor="let song of filteredData">
     <img [src]="song.image">
     <ion-card-header>
       <ion-card-subtitle>{{song.author}}</ion-card-subtitle>
@@ -26,7 +27,7 @@
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
-  <div class="ion-text-center ion-padding" *ngIf="isFinished">
+  <div class="ion-text-center ion-padding" *ngIf="isFinished && !isFiltered">
     <span>As músicas acabaram 😢</span>
   </div>
 
