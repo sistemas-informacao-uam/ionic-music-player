@@ -1,36 +1,36 @@
 <ion-content id="explorarMenu">
   <div class="search-container">
-      <ion-buttons class="menuButton" slot="start">
-        <ion-menu-button menu="first"></ion-menu-button>
-      </ion-buttons>
+    <ion-buttons class="menuButton" slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
 
-      <ion-toolbar color="left">
-        <h1>Buscar:</h1>
-        <ion-searchbar class="search-bar" placeholder=""></ion-searchbar>
-      </ion-toolbar>
+    <ion-toolbar color="left">
+      <h1>Buscar:</h1>
+      <ion-searchbar class="search-bar" placeholder=""></ion-searchbar>
+    </ion-toolbar>
   </div>
 
   <h3>Músicas que talvez você goste:</h3>
-  <ion-row>
-    <ion-col class="image-card ion-activatable ripple-parent" routerLink="/home/player">
-      <img src="https://images.pexels.com/photos/2048865/pexels-photo-2048865.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-      <p>Idealism</p>
-      <span>Falling Asleep at 3:37 AM</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-    <ion-col class="image-card ion-activatable ripple-parent" routerLink="/home/player">
-      <img src="https://images.pexels.com/photos/1119972/pexels-photo-1119972.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
-      <p>Flamingosis</p>
-      <span>Football Head</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-    <ion-col class="image-card ion-activatable ripple-parent" routerLink="/home/player">
-      <img src="https://images.pexels.com/photos/1071188/pexels-photo-1071188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940">
-      <p>The Deli</p>
-      <span>Flowers</span>
-      <ion-ripple-effect></ion-ripple-effect>
-    </ion-col>
-  </ion-row>
+
+  <ion-card class="ion-activatable ripple-parent" routerLink="/home/player" *ngFor="let song of data">
+    <img [src]="song.image">
+    <ion-card-header>
+      <ion-card-subtitle>{{song.author}}</ion-card-subtitle>
+      <ion-card-title>{{song.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-ripple-effect></ion-ripple-effect>
+  </ion-card>
+
+  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <div class="ion-text-center ion-padding" *ngIf="isFinished">
+    <span>As músicas acabaram 😢</span>
+  </div>
+
+
 </ion-content>
 
 <ion-menu contentId="explorarMenu" menuId="first" side="start" type="overlay">
