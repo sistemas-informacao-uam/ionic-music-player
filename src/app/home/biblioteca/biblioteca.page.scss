@@ -1,0 +1,20 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  background-image: url('https://media.taringa.net/knn/identity/aHR0cHM6Ly9rNjIua24zLm5ldC90YXJpbmdhL0UvRS9FLzAvMy81L3RodW1icy8wMUMuanBn');
+  background-size: cover;
+
+  .menuButton {
+    color: white;
+  }
+
+  h1 {
+    margin-top: 40px;
+    background-color: rgba(1, 1, 1, 0.3);
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+  }
+}
