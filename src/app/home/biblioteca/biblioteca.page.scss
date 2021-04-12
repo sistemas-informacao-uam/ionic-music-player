@@ -1,4 +1,9 @@
-.search-container {
+h4 {
+  text-indent: 15px;
+  font-size: 15px;
+}
+
+.header-container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -16,5 +21,30 @@
     font-size: 25px;
     color: white;
     text-transform: uppercase;
+  }
+}
+
+.icons {
+  margin-top: 35px;
+
+  ion-searchbar {
+    width: 75vw;
+  }
+
+  ion-button {
+    margin: auto;
+  }
+}
+
+.playlists {
+  margin-top: 35px;
+
+  ion-avatar {
+    --border-radius: 5px;
+    margin-right: 12px;
+  }
+
+  ion-icon {
+    color: red;
   }
 }

@@ -1,5 +1,5 @@
 <ion-content id="bibliotecaMenu">
-  <div class="search-container">
+  <div class="header-container">
     <ion-buttons class="menuButton" slot="end">
       <ion-menu-button menu="second"></ion-menu-button>
     </ion-buttons>
@@ -7,6 +7,31 @@
     <ion-toolbar color="left">
       <h1>Biblioteca</h1>
     </ion-toolbar>
+  </div>
+
+  <div class="icons">
+    <h4>Criar Playlist</h4>
+      <ion-row class="ion-justify-content-center">
+        <ion-searchbar searchIcon="undifined" placeholder="Nome da playlist"></ion-searchbar>
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="add-circle-outline" color="success"></ion-icon>
+        </ion-button>
+      </ion-row>
+  </div>
+
+  <div class="playlists">
+    <h4>Minhas Playlists</h4>
+    <ion-list *ngFor="let i of [0,1,2,3,4,5]">
+      <ion-item>
+        <ion-avatar>
+          <img [src]="'https://picsum.photos/id/'+(42+i*3)+'/400/400'" alt="">>
+        </ion-avatar>
+        <ion-label>Chillhop Lo-Fi</ion-label>
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
 
