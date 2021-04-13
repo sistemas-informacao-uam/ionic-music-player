@@ -23,8 +23,8 @@
 
   <div class="playlists">
     <h4>Minhas Playlists</h4>
-    <ion-list *ngFor="let i of [0,1]">
-      <ion-item>
+    <ion-list *ngFor="let i of [0]">
+      <ion-item routerLink="/home/playlist">
         <ion-avatar>
           <img [src]="'https://picsum.photos/id/'+(42+i*3)+'/400/400'" alt="">>
         </ion-avatar>
@@ -33,7 +33,7 @@
     </ion-list>
 
     <ion-list *ngFor="let playlist of playlists">
-      <ion-item>
+      <ion-item routerLink="/home/playlist">
         <ion-avatar>
           <img [src]="playlist.img" alt="">
         </ion-avatar>
