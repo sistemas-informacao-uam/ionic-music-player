@@ -22,7 +22,7 @@
     <ion-ripple-effect></ion-ripple-effect>
   </ion-card>
 
-  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content>
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
@@ -30,8 +30,6 @@
   <div class="ion-text-center ion-padding" *ngIf="isFinished && !isFiltered">
     <span>As músicas acabaram 😢</span>
   </div>
-
-
 </ion-content>
 
 <ion-menu contentId="explorarMenu" menuId="first" side="start" type="overlay">

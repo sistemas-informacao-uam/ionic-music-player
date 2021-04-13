@@ -41,7 +41,6 @@ export class ExplorarPage implements OnInit {
     // Pelo firebase teria que se basear na key (id)
     const lastSongIndex = fakeSongList.indexOf(this.data[this.data.length - 1]);
     const newData = fakeSongList.splice(lastSongIndex + 1, 3);
-    console.log(newData)
 
     // Animação de load para mostrar que está carregando os dados novos
     // Puxando de um banco de dados real não tem necessidade de colocar um timeout
