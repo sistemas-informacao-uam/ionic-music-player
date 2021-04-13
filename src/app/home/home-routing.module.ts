@@ -22,7 +22,11 @@ const routes: Routes = [
       {
         path: 'explorar',
         loadChildren: () => import('./explorar/explorar.module').then( m => m.ExplorarPageModule)
-      }
+      },
+      {
+        path: 'playlist',
+        loadChildren: () => import('./playlist/playlist.module').then( m => m.PlaylistPageModule)
+      },
     ],
   },
 ];
