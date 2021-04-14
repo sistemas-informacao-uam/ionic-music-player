@@ -1,9 +1,8 @@
-<ion-content id="bibliotecaMenu">
-  <div class="header-container">
+<ion-header>
+   <div class="header-container">
     <ion-buttons class="menuButton" slot="end">
       <ion-menu-button menu="second"></ion-menu-button>
     </ion-buttons>
-
     <ion-toolbar color="left">
       <h1>Biblioteca</h1>
     </ion-toolbar>
@@ -20,9 +19,11 @@
         </ion-button>
       </ion-row>
   </div>
+  <h4>Minhas Playlists</h4>
+</ion-header>
 
+<ion-content id="bibliotecaMenu">
   <div class="playlists">
-    <h4>Minhas Playlists</h4>
     <ion-list *ngFor="let i of [0]">
       <ion-item routerLink="/home/playlist">
         <span>

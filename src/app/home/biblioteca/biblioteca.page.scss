@@ -10,6 +10,7 @@ h4 {
   height: 200px;
   background-image: url('https://media.taringa.net/knn/identity/aHR0cHM6Ly9rNjIua24zLm5ldC90YXJpbmdhL0UvRS9FLzAvMy81L3RodW1icy8wMUMuanBn');
   background-size: cover;
+  border-bottom: 1px solid black;
 
   .menuButton {
     color: white;
@@ -37,7 +38,7 @@ h4 {
 }
 
 .playlists {
-  margin-top: 35px;
+
 
   span {
     display: flex;

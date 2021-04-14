@@ -20,6 +20,11 @@ export class BibliotecaPage {
   constructor() { }
 
   public addNewPlaylist() {
+    if(this.newPlaylistName === '') {
+      alert('Nome vazio ou inválido');
+      return;
+    }
+
     this.playlists.push({
       img: 'https://picsum.photos/id/'+this.randomNumber+'/400/400',
       name: this.newPlaylistName
@@ -29,8 +34,7 @@ export class BibliotecaPage {
     this.randomNumber = Math.floor(5 + Math.random() * 103);
   }
 
-  public removePlaylist(toRemove: Playlist) {
-    const index = this.playlists.indexOf(toRemove)
-    this.playlists.splice(index, 1);
+  public removePlaylist(index: Playlist) {
+    this.playlists.splice(this.playlists.indexOf(index, 1));
   }
 }

@@ -1,4 +1,4 @@
-<ion-content id="explorarMenu">
+<ion-header>
   <div class="search-container">
     <ion-buttons class="menuButton" slot="start">
       <ion-menu-button menu="first"></ion-menu-button>
@@ -10,7 +10,9 @@
       </ion-searchbar>
     </ion-toolbar>
   </div>
+</ion-header>
 
+<ion-content id="explorarMenu">
   <h3>Músicas que talvez você goste:</h3>
 
   <ion-card class="ion-activatable ripple-parent" *ngFor="let song of filteredData">
