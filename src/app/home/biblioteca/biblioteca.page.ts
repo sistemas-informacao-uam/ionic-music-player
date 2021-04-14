@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 interface Playlist {
+  id: string;
   img: string;
   name: string;
 }
@@ -20,25 +22,24 @@ export class BibliotecaPage {
   constructor() { }
 
   public addNewPlaylist() {
-    if(this.newPlaylistName === '') {
+    if (this.newPlaylistName === '') {
       alert('Nome vazio ou inválido');
       return;
     }
 
     this.playlists.push({
-      img: 'https://picsum.photos/id/'+this.randomNumber+'/400/400',
+      // Essa função uuid(), vem da biblioteca chamada uuid que importei lá em cima
+      // Serve para gerar um identificador único universal (uuid)
+      // No momento da para entender como um jeito prático para criar um id único para essa playlist
+      id: uuid(),
+      img: 'https://picsum.photos/id/' + this.randomNumber + '/400/400',
       name: this.newPlaylistName
     });
     this.newPlaylistName = '';
     this.randomNumber = Math.floor(5 + Math.random() * 103);
   }
 
-  public removePlaylist(index: Playlist) {
-    for(let i=0; i< this.playlists.length; i++) {
-      if(index.name === this.playlists[i].name) {
-        let i = this.playlists.indexOf(index);
-        this.playlists.splice(i, 1);
-      }
-    }
+  public removePlaylist(playlist: Playlist) {
+    this.playlists = this.playlists.filter(obj => obj.id != playlist.id);
   }
 }
