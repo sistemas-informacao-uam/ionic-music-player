@@ -13,7 +13,7 @@
 
   <h3>Músicas que talvez você goste:</h3>
 
-  <ion-card class="ion-activatable ripple-parent" routerLink="/home/player" *ngFor="let song of filteredData">
+  <ion-card class="ion-activatable ripple-parent" *ngFor="let song of filteredData">
     <img [src]="song.image">
     <ion-card-header>
       <ion-card-subtitle>{{song.author}}</ion-card-subtitle>

@@ -16,10 +16,6 @@ const routes: Routes = [
         loadChildren: () => import('./biblioteca/biblioteca.module').then( m => m.BibliotecaPageModule)
       },
       {
-        path: 'player',
-        loadChildren: () => import('./player/player.module').then( m => m.PlayerPageModule)
-      },
-      {
         path: 'explorar',
         loadChildren: () => import('./explorar/explorar.module').then( m => m.ExplorarPageModule)
       },
