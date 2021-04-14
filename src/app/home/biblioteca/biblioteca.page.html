@@ -43,8 +43,8 @@
         </ion-avatar>
         <ion-label>{{playlist.name}}</ion-label>
         </span>
-        <ion-button fill="clear">
-          <ion-icon slot="icon-only" name="trash-outline" (click)="removePlaylist(playlist)"></ion-icon>
+        <ion-button fill="clear" (click)="removePlaylist(playlist)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
         </ion-button>
       </ion-item>
     </ion-list>

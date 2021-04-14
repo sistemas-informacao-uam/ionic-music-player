@@ -28,13 +28,17 @@ export class BibliotecaPage {
     this.playlists.push({
       img: 'https://picsum.photos/id/'+this.randomNumber+'/400/400',
       name: this.newPlaylistName
-    })
-    console.log(this.playlists);
+    });
     this.newPlaylistName = '';
     this.randomNumber = Math.floor(5 + Math.random() * 103);
   }
 
   public removePlaylist(index: Playlist) {
-    this.playlists.splice(this.playlists.indexOf(index, 1));
+    for(let i=0; i< this.playlists.length; i++) {
+      if(index.name === this.playlists[i].name) {
+        let i = this.playlists.indexOf(index);
+        this.playlists.splice(i, 1);
+      }
+    }
   }
 }
