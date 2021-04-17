@@ -134,6 +134,7 @@ padZero(v) {
   return (v < 10) ? "0" + v : v;
 }
 
+// PRÓXIMA MÚSICA
 playNext() {
   var index = this.songs.findIndex(x => x.title == this.currTitle);
 
@@ -146,6 +147,7 @@ playNext() {
   }
 }
 
+// MÚSICA ANTERIOR
 playPrev() {
   var index = this.songs.findIndex(x => x.title == this.currTitle);
 
@@ -163,6 +165,7 @@ playPrev() {
 minimize() {
   document.getElementById("fullPlayer").style.bottom = "-1000px";
   document.getElementById("miniPlayer").style.bottom = "0px";
+
   }
 //MAXIMIZAR O PLAYER TODO
 maximize() {
@@ -208,6 +211,5 @@ maximize() {
       this.currSong.play();
     }
   }
-
-
 }
+

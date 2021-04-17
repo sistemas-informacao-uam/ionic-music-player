@@ -12,4 +12,7 @@ export class ConfigPage implements OnInit {
   ngOnInit() {
   }
 
+
+  public randomNumber = Math.floor(5 + Math.random() * 103);
+
 }

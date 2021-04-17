@@ -2,6 +2,7 @@
     font-weight: bold;
 }
 
+
 ion-item {
     ion-thumbnail {
         img {
@@ -37,7 +38,8 @@ ion-item {
     z-index: 20;
     //Hide by default by setting bottom value in negative
     bottom: -1000px;
-    
+    color: red;
+
     //Current Song Image 
     #currImg {
         margin-top: 30px;
