@@ -78,4 +78,9 @@ export class ExplorarPage implements OnInit {
     this.isFiltered = false;
     this.filteredData = this.data;
   }
+
+  public likedSongs(song) {
+    song.liked = !song.liked;
+    console.log(song);
+  }
 }

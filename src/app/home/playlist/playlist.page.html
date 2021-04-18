@@ -3,23 +3,33 @@
     <ion-button slot="start" fill="filled" routerLink="/home/biblioteca">
       <ion-icon slot="icon-only" name="arrow-back-outline" color="danger"></ion-icon>
     </ion-button>
-    <ion-title slot="end">Chillhop Lo-Fi[Func nome]</ion-title>
+    <ion-title slot="end">Músicas curtidas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
   <ion-list-header>
-    <ion-label>Músicas</ion-label>
+    <ion-label (click)="teste()">Músicas</ion-label>
   </ion-list-header>
 
   <ion-item lines="none" *ngFor="let song of songs" (click)="playSong(song.title,song.subtitle,song.img,song.path)">
     <ion-thumbnail slot="start">
        <img src="{{song.img}}" />
     </ion-thumbnail>
-    <ion-label> 
+    <ion-label>
        <h2>{{song.title}}</h2>
        <p>{{song.subtitle}}</p>
+    </ion-label>
+   </ion-item>
+
+   <ion-item lines="none" *ngFor="let likedMusic of likedMusics">
+    <ion-thumbnail slot="start">
+       <img src="{{likedMusic.image}}" />
+    </ion-thumbnail>
+    <ion-label>
+       <h2>{{likedMusic.title}}</h2>
+       <p>{{likedMusic.author}}</p>
     </ion-label>
    </ion-item>
 </ion-content>
@@ -136,7 +146,7 @@
   <ion-progress-bar value="{{progress}}"></ion-progress-bar>
 </ion-toolbar>
 
-  
+
 
 
 

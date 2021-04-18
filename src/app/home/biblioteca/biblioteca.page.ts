@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 
 interface Playlist {
   id: string;
   img: string;
   name: string;
+
+  musics?: [];
 }
 
 @Component({

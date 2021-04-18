@@ -26,7 +26,7 @@ export class PlaylistPage implements OnInit {
     subtitle: "Imagine Dragons",
     img: "/assets/thunder.jpg",
     path: "/assets/playlist/thunder.mp3"
-    }
+    },
   ];
 
   //Current song details

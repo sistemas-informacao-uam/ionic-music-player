@@ -3,4 +3,5 @@ export interface song {
   title: string,
   author: string,
   image: string,
+  liked: boolean,
 }

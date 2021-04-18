@@ -14,8 +14,8 @@
   <h3>Músicas que talvez você goste:</h3>
 
   <ion-list *ngFor="let song of filteredData">
-    <ion-item lines="none" routerLink="/home/playlist">
-      <span>
+    <ion-item lines="none">
+      <span (click)="mostrarDado(song)">
         <ion-row class="ion-align-items-center">
           <ion-avatar>
             <img [src]="song.image">
@@ -26,6 +26,10 @@
           </ion-col>
         </ion-row>
       </span>
+      <ion-button fill="clear" slot="end" [color]="song.liked ? 'warning' : 'dark'" (click)="likedSongs(song)">
+        <ion-icon [name]="song.liked ? 'thumbs-up
+        ' : 'thumbs-up-outline'" slot="icon-only"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
 
