@@ -13,14 +13,21 @@
 <ion-content>
   <h3>Músicas que talvez você goste:</h3>
 
-  <ion-card class="ion-activatable ripple-parent" *ngFor="let song of filteredData">
-    <img [src]="song.image">
-    <ion-card-header>
-      <ion-card-subtitle>{{song.author}}</ion-card-subtitle>
-      <ion-card-title>{{song.title}}</ion-card-title>
-    </ion-card-header>
-    <ion-ripple-effect></ion-ripple-effect>
-  </ion-card>
+  <ion-list *ngFor="let song of filteredData">
+    <ion-item lines="none" routerLink="/home/playlist">
+      <span>
+        <ion-row class="ion-align-items-center">
+          <ion-avatar>
+            <img [src]="song.image">
+          </ion-avatar>
+          <ion-col size="auto" class="ml-auto">
+            <ion-card-subtitle>{{song.author}}</ion-card-subtitle>
+            <ion-card-title>{{song.title}}</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </span>
+    </ion-item>
+  </ion-list>
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
     <ion-infinite-scroll-content>

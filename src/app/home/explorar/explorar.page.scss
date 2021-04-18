@@ -26,10 +26,11 @@ h3 {
   font-size: 15px;
 }
 
-ion-card {
+ion-item {
+  ion-card-title {
+    font-size: 18px;
+  }
   img {
-    width: 100%;
-    height: clamp(150px, 200px, 200px);
-    object-fit: cover;
+    border-radius: 10px;
   }
 }

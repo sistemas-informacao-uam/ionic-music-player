@@ -14,7 +14,7 @@ export class PlaylistPage implements OnInit {
     title: "Believer",
     subtitle: "Imagine Dragons"
     ,img: "/assets/believer.jpg",
-    path: "/assets/playlist/believer.mp3"
+    path: "/assets/fuyu.mp3"
     },
     {
     title: "Haikaiss ft Abbot, Loc Dog e Klyn",
@@ -28,7 +28,7 @@ export class PlaylistPage implements OnInit {
     path: "/assets/playlist/thunder.mp3"
     }
   ];
-  
+
   //Current song details
   currTitle:string;
   currSubtitle:string;
@@ -65,7 +65,7 @@ export class PlaylistPage implements OnInit {
   }
 
   //PLAY SONG
-  playSong(title, subTitle, img,song){  
+  playSong(title, subTitle, img,song){
     if (this.currSong != null) {
       this.currSong.pause();     //If a song plays,stop that ////////////////
   }
@@ -108,7 +108,7 @@ export class PlaylistPage implements OnInit {
     this.currSong.addEventListener("timeupdate", () => {
 
       //update some infos as song plays on
-      //if ion-range not touched the do update 
+      //if ion-range not touched the do update
       if (!this.isTouched) {
 
         //update ion-range value
@@ -124,7 +124,7 @@ export class PlaylistPage implements OnInit {
         }
       }
     });
- 
+
 }
 sToTime(t) {
   return this.padZero(parseInt(String((t / (60)) % 60))) + ":" +
@@ -191,7 +191,7 @@ maximize() {
     this.currSong.pause();
     this.isPlaying = false;
   }
-  
+
   touchStart() {
     this.isTouched = true;
     this.currRangeTime = Number(this.range.value);

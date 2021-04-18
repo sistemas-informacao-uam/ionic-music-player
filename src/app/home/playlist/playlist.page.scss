@@ -38,9 +38,9 @@ ion-item {
     z-index: 20;
     //Hide by default by setting bottom value in negative
     bottom: -1000px;
-    color: red;
+    color: #383a3e;
 
-    //Current Song Image 
+    //Current Song Image
     #currImg {
         margin-top: 30px;
         width: 200px;
@@ -50,7 +50,7 @@ ion-item {
     p {
         color: #8c8c8c;
         margin: 0;
-    }   
+    }
     ion-text {
         font-size: medium;
     }
