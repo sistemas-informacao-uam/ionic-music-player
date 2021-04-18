@@ -1,18 +1,16 @@
 <ion-header>
   <div class="search-container">
-    <ion-buttons class="menuButton" slot="start">
-      <ion-menu-button menu="first"></ion-menu-button>
-    </ion-buttons>
-
     <ion-toolbar color="left">
-      <h1>Buscar:</h1>
-      <ion-searchbar class="search-bar" placeholder="" (ionInput)="filterData($event)" (ionClear)="resetFilter()">
-      </ion-searchbar>
+      <div class="search-content">
+        <h1>Buscar:</h1>
+        <ion-searchbar class="search-bar" placeholder="" (ionInput)="filterData($event)" (ionClear)="resetFilter()">
+        </ion-searchbar>
+      </div>
     </ion-toolbar>
   </div>
 </ion-header>
 
-<ion-content id="explorarMenu">
+<ion-content>
   <h3>Músicas que talvez você goste:</h3>
 
   <ion-card class="ion-activatable ripple-parent" *ngFor="let song of filteredData">
@@ -33,18 +31,3 @@
     <span>As músicas acabaram 😢</span>
   </div>
 </ion-content>
-
-<ion-menu contentId="explorarMenu" menuId="first" side="start" type="overlay">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content routerLink="/home/config">
-    <ion-icon name="person-circle-outline"></ion-icon>
-    <h4>Configurações</h4>
-  </ion-content>
-  <ion-content>
-    <h4>Sair</h4>
-  </ion-content>
-</ion-menu>
